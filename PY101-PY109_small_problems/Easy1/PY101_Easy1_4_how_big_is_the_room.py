@@ -33,6 +33,32 @@ The program prints both the area in m2 and ft2.
 
 C:
 """
+
+# # def check_float(prompt):
+#     while True:
+#         try:
+#             value = float(input(prompt))
+#             if value > 0:
+#                 return value
+#             else:
+#                 print('Please input a positive number.')
+#         except ValueError:
+#             print('Invalid entry. Please input a positive number.')
+
+# length_meters = check_float('Please send the length of a room in meters: ')
+# width_meters = check_float(f'Please send the width of a room in meters: ')
+# print(f'The area of the room is {length_meters * width_meters} square meters '
+#       f'and {length_meters * width_meters * 10.7639:.1f} square feet.')
+
+
+def check_m_f(answer):
+    while True:
+        choice = input(answer).strip().lower()
+        if choice == 'meters' or choice == 'feet':
+            return choice
+        else:
+            print("Please enter either of the words meters or feet.")
+
 def check_float(prompt):
     while True:
         try:
@@ -40,12 +66,11 @@ def check_float(prompt):
             if value > 0:
                 return value
             else:
-                print('Please input a positive number.')
+                print("Please enter a positive number.")
         except ValueError:
-            print('Invalid entry. Please input a positive number.')
+            print("Invalid entry. Please enter a positive number.")
 
-length_meters = check_float('Please send the length of a room in meters: ')
-width_meters = check_float(f'Please send the width of a room in meters: ')
-print(f'The area of the room is {length_meters * width_meters} square meters '
-      f'and {length_meters * width_meters * 10.7639:.1f} square feet.')
-
+unit = check_m_f("Use meters or feet to measure the room? ")
+length = check_float(f'Please write the length of a room in {unit}: ')
+width = check_float(f'Please write the width of a room in {unit}: ')
+print(f'The area of the room is {length * width} square {unit}.')
