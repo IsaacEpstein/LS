@@ -3,7 +3,6 @@ PY101-PY109_small_problems
 
 Easy1
 2 Odd Numbers
-
 Print all odd numbers from 1 to 99, inclusive, 
 with each number on a separate line.
 Bonus Question: Can you solve the problem 

@@ -2,7 +2,7 @@
 PY101-PY109_small_problems
 
 Easy1
-Even Numbers
+3 Even Numbers
 Print all even numbers from 1 to 99, inclusive, 
 with each number on a separate line.
 Bonus Question: Can you solve the problem by 
